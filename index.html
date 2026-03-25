@@ -9,16 +9,14 @@
 <body>
     <h1>Test page</h1>
     <p>Tämäkin on testi</p>
-    <button class="button" onclick="">Click me!</button>
-    <p id="tulos"></p>
-    <script>
-        document.getElementById("button").addEventListener("click", hello);
-        async function hello() {
-            const response = await fetch("/api/hello");
-            const data = await response.json();
-        }
-        document.getElementById("tulos").textContent = data.message;
-    </script>
+    <button class="button" onclick="haeKuva()">Näytä kuva</button>
+    <div id="demo"></div>
+
+<script>
+function haeKuva(){
+    document.getElementById("demo").innerHTML = '<img src="./images/hello-wave.gif" alt="kuva" width="20%">';
+}
+</script>
 </body>
 </html>
 
